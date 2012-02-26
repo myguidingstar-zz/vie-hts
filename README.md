@@ -85,8 +85,8 @@ Từ
 	* tương tự, phân biệt **u** của vần với u của qu~
     * chỉ xét **y** trong trường hợp đọc lên khác với khi bị thay bằng i, ví dụ:
 		* cai, ca**y**: có xét
-		* củi, cu**ỷ** ("quỷ" được viết lại): có xét
-		* cí, c**ý** ("kí", "ký" được viết lại): không xét
+		* củi, cu__ỷ__ ("quỷ" được viết lại) có xét
+		* cí, c__ý__ ("kí", "ký" được viết lại) không xét
 
 Cách thống kê
 -------------
