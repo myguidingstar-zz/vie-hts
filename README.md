@@ -125,45 +125,37 @@ Cách thống kê
 		* cách tính (xét một cách thủ công các trường hợp kết hợp có thể được của tiếng Việt)
 			* kết hợp âm chính và âm đuôi để thu được các **bộ âm đuôi**
 			* kết hợp âm đầu với các bộ âm đuôi
-	* minh hoạ (các vần):
-		* /a
-			1. _- /a (các bộ âm đuôi)
-				* /a -_ {6}
-				* /a -c {2}
-				* /a -ch {2}
-				* /a -i {6}
-				* /a -m {6}
-				* /a -n {6}
-				* /a -ng {6}
-				* /a -nh {6}
-				* /a -o {6}
-				* /a -p {2}
-				* /a -t {2}
-				* /a -u {6}
-				* /a -y {6}
-			* Kết hợp âm đầu với các bộ âm đuôi
-				* i- /a ~ (dùng lại kết quả bộ âm đuôi, có xét lại. Chỉ kết quả in đậm là có thể kết hợp)
-					* **/a -_ {6}**
-					* /a -c {2}
-					* /a -ch {2}
-					* /a -i {6}
-					* /a -m {6}
-					* /a -n {6}
-					* /a -ng {6}
-					* /a -nh {6}
-					* /a -o {6}
-					* /a -p {2}
-					* /a -t {2}
-					* /a -u {6}
-					* /a -y {6}		
-				* o- /a (làm như i-)
-					* ...
-				* u- /a (làm như i-)
-					* ...
-		* /ă
+* Minh hoạ vần /a:
+	1. _- /a (các bộ âm đuôi)
+		* /a -_ {6}
+		* /a -c {2}
+		* /a -ch {2}
+		* /a -i {6}
+		* /a -m {6}
+		* /a -n {6}
+		* /a -ng {6}
+		* /a -nh {6}
+		* /a -o {6}
+		* /a -p {2}
+		* /a -t {2}
+		* /a -u {6}
+		* /a -y {6}
+	* Kết hợp âm đầu với các bộ âm đuôi
+		* i- /a ~ (dùng lại kết quả bộ âm đuôi, có xét lại. Chỉ kết quả in đậm là có thể kết hợp)
+			* **/a -_ {6}**
+			* /a -c {2}
+			* /a -ch {2}
+			* /a -i {6}
+			* /a -m {6}
+			* /a -n {6}
+			* /a -ng {6}
+			* /a -nh {6}
+			* /a -o {6}
+			* /a -p {2}
+			* /a -t {2}
+			* /a -u {6}
+			* /a -y {6}		
+		* o- /a (làm như i-)
 			* ...
-		* /â
-		* /o
-		* /u
-		* ...
-		* /y
+		* u- /a (làm như i-)
+			* ...
