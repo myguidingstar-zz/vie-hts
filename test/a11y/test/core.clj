@@ -3,4 +3,5 @@
   (:use [clojure.test]))
 
 (deftest unicode-support
-  (is (= (str (nth major-vowels 1) (nth diacritics-6 3)) "ẳ") "Clojure works with unicode."))
+  (is (= (str (nth major-vowels 1) (nth diacritics-6 3)) "ẳ") "Clojure works with unicode!!!"))
+
