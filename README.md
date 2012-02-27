@@ -7,7 +7,7 @@ Mục tiêu của dự án là có được một chương trình đọc văn b�
  đồng thời cung cấp chỉ dẫn (à hỗ trợ) cho cộng đồng có thể tự xây dựng các giọng đọc bổ sung)
 
 Giải pháp sẵn có hiện nay là **espeak**, chương trình nhỏ gọn đang được cài sẵn trong nhiều distro.
-Espeak cũng được google sử dụng để phát âm tiếng Việt.
+Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 
 Để máy tính đọc được tiếng Việt, có một số hướng đi:
 
@@ -87,7 +87,12 @@ Từ
 		* cai, ca**y**: có xét
 		* củi, cu__ỷ__ ("quỷ" được viết lại) có xét
 		* cí, c__ý__ ("kí", "ký" được viết lại) không xét
-
+* Tên tiếng Anh dùng trong chương trình:
+	* Vần: rhyme
+	* Phụ âm đầu: consonant
+	* Âm chính: major-vowel
+	* Đầu vần: vowel-prefix
+	* Đuôi vần: vowel-suffix
 Cách thống kê
 -------------
 
@@ -102,7 +107,7 @@ Cách thống kê
 		* gì = j~ ~ì
 	* __h__
 	* __j__
-	* __k__ (trong "Bắc Kạn")
+	* __k__ (trong "Bắc Kạn"), __kh__
 	* __l__
 	* __m__
 	* __n, ng, nh__
