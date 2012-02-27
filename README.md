@@ -1,10 +1,11 @@
 Giới thiệu
 ==========
 Chương trình này được viết bằng clojure, mục đích chủ yếu để tạo danh sách các âm cần ghi.
-Ngoài ra, chương trình cũng đưa ra một số kết quả tính toán về mặt số lượng.
+Đồng thời, chương trình cũng đưa ra một số kết quả tính toán về mặt số lượng.
 
 Mục tiêu của dự án là có được một chương trình đọc văn bản tiếng Việt (Vietnamese Text-to-Speech) với chất lượng giọng nói đầu ra đủ tốt;
- đồng thời cung cấp chỉ dẫn (à hỗ trợ) cho cộng đồng có thể tự xây dựng các giọng đọc bổ sung)
+ đồng thời cung cấp chỉ dẫn (và hỗ trợ) cho cộng đồng có thể tự xây dựng các giọng đọc bổ sung). Ngoài ra, phần ghi âm của dự án cũng là nguồn
+ dữ liệu đầu vào tương đối đầy đủ để phân tích trên chương trình Praat cho những ai muốn tiến hành theo cách espeak đang làm (xem dưới đây).
 
 Giải pháp sẵn có hiện nay là **espeak**, chương trình nhỏ gọn đang được cài sẵn trong nhiều distro.
 Espeak cũng được Google sử dụng để phát âm tiếng Việt.
@@ -87,6 +88,7 @@ Từ
 		* cai, ca**y**: có xét
 		* củi, cu__ỷ__ ("quỷ" được viết lại) có xét
 		* cí, c__ý__ ("kí", "ký" được viết lại) không xét
+
 * Tên tiếng Anh dùng trong chương trình:
 	* Vần: rhyme
 	* Phụ âm đầu: consonant
@@ -159,7 +161,7 @@ Cách thống kê
 			* /a -p {2}
 			* /a -t {2}
 			* /a -u {6}
-			* /a -y {6}		
+			* /a -y {6}
 		* o- /a (làm như i-)
 			* ...
 		* u- /a (làm như i-)

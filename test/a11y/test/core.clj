@@ -2,5 +2,5 @@
   (:use [a11y.core])
   (:use [clojure.test]))
 
-(deftest unicode-support ;; FIXME: write
-  (is (== (str (nth am-chinh 1) (nth dau-6 3)) "") "No tests have been written."))
+(deftest unicode-support
+  (is (= (str (nth major-vowels 1) (nth diacritics-6 3)) "ẳ") "Clojure works with unicode."))
