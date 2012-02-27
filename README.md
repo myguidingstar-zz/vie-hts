@@ -97,6 +97,7 @@ Từ
 	* Âm chính: major-vowel
 	* Đầu vần: vowel-prefix
 	* Đuôi vần: vowel-suffix
+	* Bộ âm chính: major-vowel-set
 
 Thống kê
 =============
