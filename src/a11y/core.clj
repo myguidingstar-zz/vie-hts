@@ -12,7 +12,4 @@
 (def vowel-prefixes '[nil i o u])
 (def diacritics-6 '[nil ̀ ́ ̉ ̃ ̣])
 (def diacritics-2 '[́ ̣])
-;(binding [*out* (java.io.FileWriter. "my.log")]
-;  (print (str (nth am-chinh 2) (nth dau-6 0)))
-;  (print (get so-dau-duoi (nth dau-6 0)))
-;(flush))
+
