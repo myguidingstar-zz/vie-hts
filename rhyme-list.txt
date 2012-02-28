@@ -442,12 +442,6 @@ ĩ
 ị
 ích
 ịch
-ii
-ìi
-íi
-ỉi
-ĩi
-ịi
 im
 ìm
 ím
@@ -720,12 +714,6 @@ úng
 ủng
 ũng
 ụng
-unh
-ùnh
-únh
-ủnh
-ũnh
-ụnh
 úp
 ụp
 út
