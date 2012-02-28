@@ -24,7 +24,7 @@ Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 	* Nhược: vì quá trình phân tích xử lí phức tạp nên cộng đồng khó tham gia đóng góp trực tiếp, chỉ có cá nhân/nhóm nghiên cứu sâu mới có những điều chỉnh đáng kể.
 * Cách tiếp cận của dự án a11-vietnamese:
 	* Ghi âm các **phần phụ âm đầu** và **vần** rồi tổng hợp (đơn giản là nối). Các khái niệm vui lòng xem bên dưới. Số âm cần ghi dự kiến là:
-		* số phần phụ âm đầu: 
+		* số phần phụ âm đầu: 27
 		* số vần: 818
 	* Kết hợp cân bằng (nhưng không thể tối đa) ưu, nhược của hai phương pháp trên.
 	* Tạo một voice tên là vie cho espeak (phải viết lại *vie_rules*, *vie_list* và *ph_vie*)

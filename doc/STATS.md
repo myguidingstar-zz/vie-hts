@@ -27,6 +27,7 @@ Thống kê
 		* __v__
 		* __w__
 		* __x__
+		* __y__
 		* __z__
 	* Các vần
 		* tính số vần qua mỗi âm chính, trong mỗi âm chính:
