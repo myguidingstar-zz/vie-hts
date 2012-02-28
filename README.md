@@ -140,7 +140,7 @@ Thống kê
 		* Với tính có thể được kết hợp "lỏng lẻo" như vậy, dự án có thể lãng phí công sức để tạo nên những âm chưa bao giờ gặp. Tuy nhiên, việc bỏ thêm chút ít công sức này có ý nghĩa ở chỗ:
 			* đem lại khả năng chuyển thành giọng nói tất cả các từ của người Việt, bao gồm tiếng lóng, từ mượn nước ngoài và các từ sẽ được sinh ra trong tương lai.
 			* tránh được trường hợp bỏ sót các từ địa phương, các danh từ riêng có cách phát âm đặc biệt v.v...
-
+			* ví dụ: ~ing, 
 * Minh hoạ vần /a: các bộ âm chính bao gồm a, ia, oa, ua, ưa
 	1. _- /a
 		* /a -_ {6}

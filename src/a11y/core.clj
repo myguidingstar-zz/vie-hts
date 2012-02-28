@@ -30,7 +30,7 @@
 	"uâ" [    c      m n ng      p t    ]
 	"ưâ" []
 
-	 "e" [nil c    i m n ng nh   p t    ]
+	 "e" [nil c      m n ng      p t    ]
 	"ie" []
 	"oe" [nil c      m n ng    o p t    ]
 	"ue" [] ;biểu diễn qua oe
@@ -60,7 +60,7 @@
 	"uô" [    c    i m n ng      p t    ]
 	"ưô" []
 
-	 "ơ" [nil c    i m n ng nh   p t u  ]
+	 "ơ" [nil c    i m n ng      p t    ]
 	"iơ" []
 	"oơ" []
 	"uơ" [nil      i                 u  ]
@@ -78,7 +78,7 @@
 	"uư" []
 	"ưư" []
 
-	 "y" [nil   ch i m n ng nh   p t    ]
+	 "y" [                              ] ;dùng i thay thế
 	"iy" []
 	"oy" []
 	"uy" [nil c ch   m n ng nh   p t u  ]
@@ -104,7 +104,7 @@
 		(= (get diacritics-available vowel-suffix) 6) diacritics-6
 		(= (get diacritics-available vowel-suffix) 2) diacritics-2
 		))
-(defn add-diacritics [major-vowel-set vowel-suffix]
+(defn add-diacritics-to-rhyme-set [[major-vowel-set vowel-suffix]]
 	(reduce conj []
 		(map #(str major-vowel-set %1 vowel-suffix)
 			(suffix-to-diacritics vowel-suffix))))
@@ -112,5 +112,17 @@
 	(reduce conj []
 		(map #(conj [major-vowel-set] %1)
 			(get allowed-suffixes major-vowel-set))))
-
-
+(defn make-rhymes-by-single-major-vowel [major-vowel]
+	(apply concat
+		(map add-diacritics-to-rhyme-set
+			(apply concat
+				(map make-rhyme-sets (get-major-vowel-set major-vowel))))))
+(defn make-all-rhymes []
+	(apply concat
+		(map make-rhymes-by-single-major-vowel major-vowels)
+	))
+;(apply println (make-all-rhymes))
+(binding [*out* (java.io.FileWriter. "rhyme-list.txt")] ;overwrite mode
+	(dorun
+		(for [ rhyme (make-all-rhymes)]
+			(println rhyme))))
