@@ -42,7 +42,7 @@
 	"uê" [nil   ch   m n ng nh   p t u y]
 	"ưê" []
 
-	 "i" [nil   ch i m n ng nh   p t u  ]
+	 "i" [nil   ch   m n ng nh   p t u  ]
 	"ii" []
 	"oi" [] ;đây là o- /i, đừng nhầm với /o -i
 	"ui" [] ;đây là u- /i, đừng nhầm với /u -i ; biểu diễn qua uy
@@ -66,7 +66,7 @@
 	"uơ" [nil      i                 u  ]
 	"ươ" [    c    i m n ng      p t u  ]
 
-	 "u" [nil c    i m n ng nh   p t   y]
+	 "u" [nil c    i m n ng      p t   y]
 	"iu" [] ;đây là i- /u, đừng nhầm với /i -u
 	"ou" []
 	"uu" []
