@@ -10,6 +10,9 @@ Kế hoạch triển khai dự án
 		* Nhóm gặp mặt làm việc trực tiếp do đặc thù sản phẩm là âm thanh.
 		* Thường xuyên cập nhật thông tin và sản phẩm trên github.
 		* Tiếp thu ý kiến đóng góp của cộng đồng.
+	* Thời gian:
+		* dự kiến kéo dài khoảng 1,5 tháng để hoàn thành tất cả các mục tiêu với chất lượng tốt
+		* tối đa không quá 3 tháng nếu có sự cố
 * Giai đoạn hai: bổ sung một số giọng đọc
 	* Công bố rộng rãi kết quả của giai đoạn một
 	* Công bố hướng dẫn chi tiết cho việc tạo các giọng nói tiếp theo.
