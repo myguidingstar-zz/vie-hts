@@ -22,7 +22,7 @@ Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 		* đọc được tất cả các từ mà không cần cho sẵn
 		* có thể điều chỉnh giọng đọc lên giọng, xuống giọng v.v... bằng tham truyền đến thuật toán.
 	* Nhược: vì quá trình phân tích xử lí phức tạp nên cộng đồng khó tham gia đóng góp trực tiếp, chỉ có cá nhân/nhóm nghiên cứu sâu mới có những điều chỉnh đáng kể.
-* Cách thực hiện của dự án a11-vietnamese:
+* Cách tiếp cận của dự án a11-vietnamese:
 	* Ghi âm các **phần phụ âm đầu** và **vần** rồi tổng hợp (đơn giản là nối). Các khái niệm vui lòng xem bên dưới.
 	* Kết hợp cân bằng (nhưng không thể tối đa) ưu, nhược của hai phương pháp trên.
 	* Tạo một voice tên là vie cho espeak (phải viết lại *vie_rules*, *vie_list* và *ph_vie*)
@@ -32,6 +32,7 @@ Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 			* mỗi giọng đọc là một người đọc (hoặc những người có giọng giống nhau)
 			* mỗi giọng đọc phụ này cũng có khối lượng bằng một giọng đoc thường
 			* cung bậc cảm xúc đặc biệt có thể tạo ra tự động bằng cách áp dụng các hiệu ứng âm thanh vào giọng đọc chuẩn, tuy nhiên chưa thể chắc chắn về tính tự nhiên của đầu ra.
+	* Chi tiết vui lòng xem mục kế hoạch triển khai.
 
 Các khái niệm
 =============
@@ -175,3 +176,12 @@ Thống kê
 		* ...
 	* ư- /a
 		* ...
+
+Kế hoạch triển khai dự án
+=========================
+1. Giai đoạn một: xây dựng giọng nói đầu tiên.
+	* Mục tiêu:
+
+* Giai đoạn hai: bổ sung một số giọng đọc
+
+* Giai đoạn ba: triển khai ứng dụng rộng rãi

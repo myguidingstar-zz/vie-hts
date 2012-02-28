@@ -83,6 +83,7 @@
 	"oy" []
 	"uy" [nil c ch   m n ng nh   p t u  ]
 	"ưy" []})
+;(def allowed-suffixes-strict) -->binding
 (defn count-allowed-suffixes [major-vowel-set]
 	(reduce + 
 		(map #(get diacritics-available %1)
@@ -98,3 +99,18 @@
 	(reduce +
 		(map count-rhymes-by-single-major-vowel
 			major-vowels)))
+(defn suffix-to-diacritics [vowel-suffix]
+	(cond
+		(= (get diacritics-available vowel-suffix) 6) diacritics-6
+		(= (get diacritics-available vowel-suffix) 2) diacritics-2
+		))
+(defn add-diacritics [major-vowel-set vowel-suffix]
+	(reduce conj []
+		(map #(str major-vowel-set %1 vowel-suffix)
+			(suffix-to-diacritics vowel-suffix))))
+(defn make-rhyme-sets [major-vowel-set]
+	(reduce conj []
+		(map #(conj [major-vowel-set] %1)
+			(get allowed-suffixes major-vowel-set))))
+
+

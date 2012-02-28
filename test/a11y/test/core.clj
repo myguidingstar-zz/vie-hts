@@ -18,3 +18,11 @@
 	(is (= (count-rhymes-by-single-major-vowel 'ă) 54)))
 (deftest count-rhymes-test
 	(is (= (count-rhymes) 896)))
+
+(deftest add-diacritics-test
+	(is (= (add-diacritics "iê" 'ng) '["iêng" "iềng" "iếng" "iểng" "iễng" "iệng"])))
+(deftest make-rhyme-sets-test
+	(is (= (make-rhyme-sets "oa") '[["oa" nil] ["oa" c] ["oa" ch] ["oa" i] ["oa" m] ["oa" n] ["oa" ng] ["oa" nh] ["oa" o] ["oa" p] ["oa" t] ["oa" y]])))
+(deftest suffix-to-diacritics-test
+	(is (= (suffix-to-diacritics 'nh) '[nil ̀ ́ ̉ ̃ ̣]))
+	(is (= (suffix-to-diacritics 'c) '[́ ̣])))
