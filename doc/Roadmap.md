@@ -28,7 +28,7 @@ Xây dựng giọng nói đầu tiên.
 * Bổ sung một số giọng đọc
 * Công bố rộng rãi kết quả của giai đoạn một
 * Công bố hướng dẫn chi tiết cho việc tạo các giọng nói tiếp theo.
-* Nhóm A11y-vietnamese hỗ trợ các nhóm khác trong việc thực hiện và
+* Nhóm vie-hts hỗ trợ các nhóm khác trong việc thực hiện và
   công bố kết quả.
 
 ## Giai đoạn ba

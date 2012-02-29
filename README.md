@@ -1,16 +1,10 @@
 Giới thiệu
 ==========
-Chương trình này được viết bằng clojure, mục đích chủ yếu để tạo danh sách các âm cần ghi.
-Đồng thời, chương trình cũng đưa ra một số kết quả tính toán về mặt số lượng.
+Dự án vie-hts (Vietnamese Human-based Text-to-Speech) hay vie-hts@a11y-vietnamese là một dự án con nằm trong tổ hợp dự án a11y-vietnamese. Mục tiêu của vie-hts là có được một chương trình đọc văn bản tiếng Việt (Vietnamese Text-to-Speech) với chất lượng giọng nói đầu ra đủ tốt; đồng thời cung cấp chỉ dẫn (và hỗ trợ) cho cộng đồng có thể tự xây dựng các giọng đọc bổ sung). Ngoài ra, phần ghi âm của dự án cũng là nguồn dữ liệu đầu vào tương đối đầy đủ để phân tích trên chương trình Praat cho những ai muốn tiếp cận theo theo cách espeak đang làm (xem dưới đây).
 
-Mục tiêu của dự án là có được một chương trình đọc văn bản tiếng Việt (Vietnamese Text-to-Speech) với chất lượng giọng nói đầu ra đủ tốt;
- đồng thời cung cấp chỉ dẫn (và hỗ trợ) cho cộng đồng có thể tự xây dựng các giọng đọc bổ sung). Ngoài ra, phần ghi âm của dự án cũng là nguồn
- dữ liệu đầu vào tương đối đầy đủ để phân tích trên chương trình Praat cho những ai muốn tiến hành theo cách espeak đang làm (xem dưới đây).
+Giải pháp tương đương sẵn có hiện nay là **espeak**, chương trình nhỏ gọn đang được cài sẵn trong nhiều distro. Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 
-Giải pháp sẵn có hiện nay là **espeak**, chương trình nhỏ gọn đang được cài sẵn trong nhiều distro.
-Espeak cũng được Google sử dụng để phát âm tiếng Việt.
-
-Để máy tính đọc được tiếng Việt, có một số hướng đi:
+Để máy tính đọc được tiếng Việt, có một số hướng giải pháp:
 
 * Ghi âm từng từ có nghĩa một (kiểu wyabdc-real-people-tts)
 	* Ưu: chất lượng đầu ra kiểm soát được 100%
@@ -22,7 +16,7 @@ Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 		* đọc được tất cả các từ mà không cần cho sẵn
 		* có thể điều chỉnh giọng đọc lên giọng, xuống giọng v.v... bằng tham truyền đến thuật toán.
 	* Nhược: vì quá trình phân tích xử lí phức tạp nên cộng đồng khó tham gia đóng góp trực tiếp, chỉ có cá nhân/nhóm nghiên cứu sâu mới có những điều chỉnh đáng kể.
-* Cách tiếp cận của dự án a11-vietnamese:
+* Cách tiếp cận của dự án vie-hts:
 	* Ghi âm các **phần phụ âm đầu** và **vần** rồi tổng hợp (đơn giản là nối). Các khái niệm vui lòng xem bên dưới. Số âm cần ghi dự kiến là:
 		* số phần phụ âm đầu: 27
 		* số vần: 818
@@ -38,6 +32,9 @@ Espeak cũng được Google sử dụng để phát âm tiếng Việt.
 
 Các khái niệm
 =============
+
+Các khái niệm dưới đây không phải là các khái niệm của ngữ pháp, ngôn ngữ học v.v... Chúng được đặt ra trong thực tiễn phân tích, triển khai vie-hts. Ngữ cảnh của chúng cũng chỉ nên áp dụng trong chương trình, do cách tiếp cận như đã trình bày ở trên.
+
 Từ
 ---
 
