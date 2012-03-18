@@ -26,8 +26,8 @@ Giải pháp tương đương sẵn có hiện nay là [Espeak](http://espeak.so
 		* số phần phụ âm đầu: 27
 		* số vần: 818
 	* Kết hợp cân bằng (nhưng không thể tối đa) ưu, nhược của hai phương pháp trên:
-    * tổng số âm phải ghi không quá lớn
-    * phát âm được tất cả các từ mà không phải ghi âm thêm.
+		* tổng số âm phải ghi không quá lớn
+		* phát âm được tất cả các từ mà không phải ghi âm thêm.
 	* Tạo một voice tên là vie cho espeak (phải viết lại *vie_rules*, *vie_list* và *ph_vie*)
 	* Cộng đồng có thể ghi âm để tạo ra giọng đọc mới
 		* thậm chí trong mỗi giọng đọc đó có thể tạo (một số) **giọng đọc phụ** được đọc với cung bậc cảm xúc đặc biệt, kèm với giọng đọc thường
@@ -39,6 +39,6 @@ Giải pháp tương đương sẵn có hiện nay là [Espeak](http://espeak.so
 
 ## Xem thêm:
 
-[Các khái niệm](Terminologies.md)  
-[Công việc dự kiến](TODO.md)  
-[Cách tham gia đóng góp](Contributing.md)  
+[Các khái niệm](Terminologies.md)	
+[Công việc dự kiến](TODO.md)	
+[Cách tham gia đóng góp](Contributing.md)	
