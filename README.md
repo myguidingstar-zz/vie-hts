@@ -39,6 +39,9 @@ Giải pháp tương đương sẵn có hiện nay là [Espeak](http://espeak.so
 
 ## Xem thêm:
 
-[Các khái niệm](Terminologies.md)	
-[Công việc dự kiến](TODO.md)	
-[Cách tham gia đóng góp](Contributing.md)	
+[Các khái niệm](Terminologies.md)
+
+[Công việc dự kiến](TODO.md)
+
+[Cách tham gia đóng góp](Contributing.md)
+
