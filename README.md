@@ -37,7 +37,8 @@ Giải pháp tương đương sẵn có hiện nay là [Espeak](http://espeak.so
 			* cung bậc cảm xúc đặc biệt có thể tạo ra tự động bằng cách áp dụng các hiệu ứng âm thanh vào giọng đọc chuẩn, tuy nhiên chưa thể chắc chắn về tính tự nhiên của đầu ra.
 	* Chi tiết vui lòng xem trong [kế hoạch triển khai]().
 
-Xem thêm:  
+## Xem thêm:
+
 [Các khái niệm](Terminologies.md)  
-[Dự định](TODO.md)  
+[Công việc dự kiến](TODO.md)  
 [Cách tham gia đóng góp](Contributing.md)  
