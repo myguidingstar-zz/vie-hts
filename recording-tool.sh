@@ -38,11 +38,11 @@ function rhyme_to_read () {
   fi
 }
 function do_record () {
-  rhyme_to_read
-  echo "recording..."
+  echo "recording ${rhyme}..."
   # incomplte. Mocking `sox`
-  touch ${rhyme}.wav # need a better file structure!
+  touch db/${rhyme}.wav # need a better file structure!
 }
+rhyme_to_read
 while IFS= read -r -n 1 -s char
   do
     if [ "$char" == $'\x1b' ] # \x1b is the start of an escape sequence
@@ -55,6 +55,8 @@ while IFS= read -r -n 1 -s char
       done
     fi
 
+    
+    
     if [ "$char" == $'\x1b[A' ]
     then
       # Up -> start recording
@@ -64,12 +66,14 @@ while IFS= read -r -n 1 -s char
     then
       # Left
       i=$((i-1))
+      rhyme_to_read
       do_record
 
     elif [ "$char" == $'\x1b[C' ]
     then
       # Right
       i=$((i+1))
+      rhyme_to_read
       do_record
       
     elif [ -z "$char" ]
