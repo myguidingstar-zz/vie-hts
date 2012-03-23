@@ -20,6 +20,9 @@
 # * press Left-Arrow to go to previous rhyme (decrease i by 1) D
 # * press Enter to exit. Var i (aka current progress) will be saved to a file name .rec-progress
 # * if you want to restart all, remove .rec-progress
+if [ ] -d db/bkup ]
+  then mkdir db/bkup -p
+fi
 if [ -f .rec-progress ]
 then
   read i < .rec-progress
@@ -28,21 +31,52 @@ else
 fi
 max=`cat rhyme-list.txt|wc -l`
 
+function get_rhyme () {
+  if [ ${1} -eq 0 ]
+  then
+    echo 'BOF'
+  elif [ ${1} -eq $max ]
+  then
+    echo 'EOF'
+  else
+    echo `sed -n "${1}p" rhyme-list.txt`
+  fi
+  }
+
 function rhyme_to_read () {
   if [ $i -le $max ]
   then
-    rhyme=`sed -n "${i}p" rhyme-list.txt`
-    echo "Please read: ${rhyme}"
+  {  
+    left=`get_rhyme $((i-1))`
+    center=`get_rhyme $i`
+    right=`get_rhyme $((i+1))`
+    echo -e "Please read: \033[30;47m $left \033[33;44;1m $center \033[37;42m $right \033[0m"
+  }
   else
     echo "Warning: end of rhyme list reached!!!"
   fi
 }
-function do_record () {
-  echo "recording ${rhyme}..."
-  # incomplte. Mocking `sox`
-  touch db/${rhyme}.wav # need a better file structure!
+# record and "filter" silence which is lower than 45dB
+# each recording timeouts after 2 seconds
+function clean_record () {
+  rhyme=`get_rhyme $i`
+  if [ -f db/${rhyme}.wav ]
+  then
+    timestamp=`date +%F_%T`
+    echo "file exist, making a backup at db/bkup/${rhyme}_${timestamp}.wav"
+    mv db/${rhyme}.wav db/bkup/${rhyme}-${timestamp}.wav
+  fi
+  # 45 dB maybe too strict. You can try a lower silence filter, or
+  timeout -s INT 2 rec -p | sox -p db/${rhyme}.wav silence -l 1 00:00:00.5 -45d -1 00:00:00.5 -45d
 }
+function do_record () {
+  echo "recording `get_rhyme $i`..."
+  clean_record
+}
+#start/resume before loop
 rhyme_to_read
+#a loop to interact with user's keyboard input
+
 while IFS= read -r -n 1 -s char
   do
     if [ "$char" == $'\x1b' ] # \x1b is the start of an escape sequence
@@ -59,7 +93,7 @@ while IFS= read -r -n 1 -s char
     
     if [ "$char" == $'\x1b[A' ]
     then
-      # Up -> start recording
+      # Up -> (Re)start recording
       do_record
       
     elif [ "$char" == $'\x1b[D' ]
