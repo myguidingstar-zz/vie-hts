@@ -20,7 +20,15 @@
 # * press Left-Arrow to go to previous rhyme (decrease i by 1) D
 # * press Enter to exit. Var i (aka current progress) will be saved to a file name .rec-progress
 # * if you want to restart all, remove .rec-progress
-if [ ] -d db/bkup ]
+
+#if [ `which sox` == 'sox not found' ] ###fixme: not work in different shell
+  #then
+    #echo 'Please install sox before recording'
+    #echo 'To install sox in ubuntu:'
+    #echo 'apt-get install sox'
+    #exit
+#fi
+if [ ! -d db/bkup ]
   then mkdir db/bkup -p
 fi
 if [ -f .rec-progress ]
@@ -30,6 +38,7 @@ else
   i=1
 fi
 max=`cat rhyme-list.txt|wc -l`
+
 
 function get_rhyme () {
   if [ ${1} -eq 0 ]
@@ -67,7 +76,8 @@ function clean_record () {
     mv db/${rhyme}.wav db/bkup/${rhyme}-${timestamp}.wav
   fi
   # 45 dB maybe too strict. You can try a lower silence filter, or
-  timeout -s INT 2 rec -p | sox -p db/${rhyme}.wav silence -l 1 00:00:00.5 -45d -1 00:00:00.5 -45d
+  #timeout -s INT 2 rec -p | sox -p db/${rhyme}.wav silence -l 1 00:00:00.5 -45d -1 00:00:00.5 -45d
+  timeout -s INT 1 rec -p | sox -p db/${rhyme}.wav
 }
 function do_record () {
   echo "recording `get_rhyme $i`..."
