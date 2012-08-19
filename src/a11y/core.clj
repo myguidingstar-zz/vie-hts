@@ -17,7 +17,7 @@
 (def vowel-suffixes '[nil c ch i m n ng nh o p t u y])
 
 (def diacritics-available
-  '{nil 6 c 2 ch 2 i 6 m 6 n 6 ng 6 nh 6 o 6 p 2 t 2 u 6 y 6})
+  '{nil 6, c 2, ch 2, i 6, m 6, n 6, ng 6, nh 6, o 6, p 2, t 2, u 6, y 6})
 
 (def vowel-prefixes '[nil i o u ư])
 
